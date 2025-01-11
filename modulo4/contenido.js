@@ -23,8 +23,8 @@ if (numero > 5) {
 //! 3. El si...else
 // La instrucción `if...else` ejecuta un bloque de código si la condición es verdadera, y otro si es falsa.
 // Ejemplo:
-let esEstudiante = true;
-if (esEstudiante) {
+let esEstudiante = false;
+if (esEstudiante===true) {
     console.log("Tienes descuento");
 } else {
     console.log("No tienes descuento");
