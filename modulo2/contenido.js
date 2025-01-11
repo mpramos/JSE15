@@ -19,7 +19,7 @@
     
     //* 2. Declaración de una variable usando let ó var asignando un valor
     let nombreUsuario1 = "Juan"; 
-    nombreUsuario1 = "Juana"; 
+    let nombreUsuario1 = "Juana"; 
 
     var nombreUsuario2 = "Juan";
     nombreUsuario2 = "Juana";
@@ -43,6 +43,10 @@
     //* Ejemplo 2  Declaración con valor ✔
     const PI = 3.14;
     console.log(PI);
+
+
+    
+
     
 
 //! Buenas prácticas:
@@ -53,7 +57,7 @@
 
 //* Usa camelCase para facilitar la lectura.
     let firstName    
-
+    
 //! 2. Reglas de nombres
 //* No pueden comenzar con números. 
 let 123nombre=12
@@ -82,20 +86,23 @@ console.log(edad);
     let edad=36 //sombreado
     console.log(edad); //36
   }
-console.log(edad); //25
+  console.log(edad); //25
+  console.log(nombre);
+  
 }
 console.log(edad); // Error: edad no está definido
 
 {
-   var edadVar=23
-   console.log(edadVar);
-   {
-      edadVar=35
-     var edadVar1=56
-     console.log(edadVar1);
-   }
+  var edadVar=23
+  console.log(edadVar);
+  {
+    edadVar=35
+    let nombre='yr'
+    var edadVar1=56
+    console.log(edadVar1);
   }
-
+}
+console.log(nombre);
   let _nombre // variables globales
   {
     let _edad // variables locales , variable global

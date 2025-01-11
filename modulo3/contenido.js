@@ -47,6 +47,9 @@ console.log(a ** b); // 512
 // Operan sobre un solo operando.
 //* Ejemplo:
 let c = '5';
+let conversionNumero=+c
+console.log(conversionNumero); // 5
+console.log( typeof conversionNumero); // 5
 console.log(+c); // 5
 console.log(-c); // -5
 
@@ -54,11 +57,13 @@ console.log(-c); // -5
 // Incrementan o decrementan el valor de una variable.
 //* Ejemplo:
 let d = 7;
+console.log(++d); // 8 (post-incremento)
+console.log(d);
+
 console.log(d--); // 8 (post-decremento)
 console.log(d);
 
 console.log(--d); // 8 (pre-decremento)
-console.log(d++); // 8 (post-incremento)
 
 console.log(++d); // 8 (pre-incremento)
 // for (let index = array.length-1; index >=0; index--) {
