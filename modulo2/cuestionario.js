@@ -192,9 +192,9 @@ let edad=56
 //* d) Error.
 
 //! 19. ¿Cómo accedemos al valor de la propiedad 'age' en el siguiente objeto?
-//! let person = { name: 'Ana', age: 30 };
+let person = { name: 'Ana', age: 30 };
 //* Opciones 🏝:
-//* a) person.age.
+//* a) person.age.✔
 //* b) person[age].
 //* c) age.person.
 //* d) get(person.age).
@@ -202,52 +202,67 @@ let edad=56
 //! 20. ¿Qué método utilizamos para unir dos arreglos en uno nuevo?
 //* Opciones 🏝:
 //* a) join().
-//* b) concat().
+//* b) concat().✔
 //* c) merge().
 //* d) append().
+const numeros=[1,2,3,4,4]
+const letras=['a','b','c']
+console.log( numeros.concat(letras));
+
 
 //! 21. Dado el código:
-//! let numbers = [1, 2, 3];
-//! numbers.pop();
-//! console.log(numbers);
+ let numbers = [1, 2, 3];
+ numbers.pop();
+ console.log(numbers);
 //* Opciones 🏝:
 //* a) [1, 2, 3].
-//* b) [1, 2].
+//* b) [1, 2].✔
 //* c) [2, 3].
 //* d) [3].
 
 //! 22. ¿Qué método utilizamos para verificar si un elemento existe en un arreglo?
 //* Opciones 🏝:
-//* a) includes().
+//* a) includes().✔
 //* b) exists().
 //* c) find().
 //* d) has().
 
+let _numeros=[1,2,3,4]
+console.log(_numeros.includes(9));
+
+
 //! 23. ¿Qué valor tendrá 'x' después de ejecutar el siguiente código?
-//! let x = '10' + 5;
+let x = '10' + 5;
 //* Opciones 🏝:
 //* a) 15.
-//* b) '105'.
+//* b) '105'.✔
 //* c) undefined.
 //* d) NaN.
+console.log(x);
+console.log(y);
+console.log(typeof x);
+
 
 //! 24. ¿Qué método invierte el orden de los elementos en un arreglo?
 //* Opciones 🏝:
-//* a) reverse().
+//* a) reverse().✔
 //* b) flip().
 //* c) invert().
 //* d) reorder().
+let frutas=['🍊','🥭','🍌','🍎','🍇','🍈','🍏','🍉']
+console.log(frutas.reverse());
+
 
 //! 25. ¿Cuál es la mejor práctica para escribir comentarios en el código?
 //* Opciones 🏝:
 //* a) Explicar todo el código en comentarios.
-//* b) Usar comentarios para aclarar fragmentos complejos o inusuales.
+//* b) Usar comentarios para aclarar fragmentos complejos o inusuales.✔
 //* c) No usar comentarios.
 //* d) Escribir comentarios en un idioma diferente al código.
 
 //! 26. ¿Qué tipo de comentario se utiliza para una línea en JavaScript?
 //* Opciones 🏝:
-//* a) // Comentario de línea.
+//* a) // Comentario de línea. ✔
 //* b) /* Comentario de línea. */
 //* c) <!-- Comentario de línea. -->
 //* d) ### Comentario de línea.
@@ -255,30 +270,58 @@ let edad=56
 //! 27. ¿Qué método utilizamos para conocer la longitud de un arreglo?
 //* Opciones 🏝:
 //* a) array.count.
-//* b) array.length.
+//* b) array.length.✔
 //* c) array.size.
 //* d) array.len.
+let foods=['🍗','🥘','🍲','🥙']
+console.log(foods.length);
+
 
 //! 28. ¿Qué valor devolverá el siguiente código?
-//! let x = 10 / 0;
+ let x = 10 / 0;
 //* Opciones 🏝:
 //* a) NaN.
-//* b) Infinity.
+//* b) Infinity. ✔
 //* c) 0.
 //* d) Error.
+console.log(x);
+console.log(typeof x);
+
 
 //! 29. ¿Qué función convierte una cadena en un número?
 //* Opciones 🏝:
 //* a) parseInt().
 //* b) parseFloat().
 //* c) Number().
-//* d) Todas las anteriores.
+//* d) Todas las anteriores. ✔
+
+// parseInt
+let numero1=parseInt('42')
+let numero2=parseInt('42.7')
+console.log(numero1);
+console.log(typeof numero1);
+console.log(numero2);
+console.log(typeof numero2);
+
+// parseFloat
+let numero3=parseFloat('42.5')
+let numero4=parseFloat('42')
+console.log(numero3);
+console.log(typeof numero3);
+console.log(numero4);
+console.log(typeof numero4);
+
+//Number
+console.log(Number('42.5'));
+console.log(Number('42'));
 
 //! 30. Dado un arreglo:
-//! let arr = ['a', 'b', 'c'];
-//! ¿Cómo podríamos eliminar el segundo elemento?
+ let arr = ['a', 'b', 'c'];
+ //¿Cómo podríamos eliminar el segundo elemento?
 //* Opciones 🏝:
-//* a) arr.splice(1, 1).
+//* a) arr.splice(1, 1).✔
 //* b) arr.pop(1).
 //* c) arr.remove(1).
 //* d) arr.delete(1).
+console.log(arr.splice(1,1));
+console.log(arr);

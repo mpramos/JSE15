@@ -151,7 +151,9 @@ let names = ["Olivia", "Emma", "Mateo", "Samuel"];
 names.splice(2, 1, "Lucas"); // Reemplaza 1 elemento en la posición 2
 console.log(names); // -> ["Olivia", "Emma", "Lucas", "Samuel"]
 
-names.splice(1, 2); // Elimina 2 elementos desde la posición 1
+const nombresSplice=names.splice(1, 2); // Elimina 2 elementos desde la posición 1
+console.log(nombresSplice);
+
 console.log(names); // -> ["Olivia", "Samuel"]
 //! Split
 // El método split convierte una cadena en un arreglo, dividiéndola en partes según un delimitador especificado.
