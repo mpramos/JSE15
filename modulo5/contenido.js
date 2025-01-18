@@ -16,6 +16,8 @@ saludar(); // -> ¡Hola, mundo!
 function sumar(a, b) {
     return a + b;
 }
+let resultado=sumar(3,7)//10
+console.log(resultado);
 console.log(sumar(3, 7)); // -> 10
 
 //! Función que no retorna nada (void)
@@ -28,8 +30,8 @@ mostrarMensaje("JavaScript es genial"); // -> El mensaje es: JavaScript es genia
 function saludarPersona(nombre = "Invitado") {
     console.log(`Hola, ${nombre}`);
 }
-saludarPersona("Carlos"); // -> Hola, Carlos
 saludarPersona(); // -> Hola, Invitado
+saludarPersona("Carlos"); // -> Hola, Carlos
 
 //! 5.0.3 Funciones de llamada
 /*
@@ -37,17 +39,21 @@ Las funciones pueden ser invocadas en cualquier momento y tantas veces como sea 
 */
 
 //! Función utilizada varias veces
-function multiplicarPorDos(numero) {
-    return numero * 2;
-}
 console.log(multiplicarPorDos(4)); // -> 8
 console.log(multiplicarPorDos(7)); // -> 14
 
 //! Funciones que llaman a otras funciones
 function calcularCuadrado(numero) {
-    return multiplicarPorDos(numero) * numero;
+    let nombre='juana'
+    console.log(nombre);
+    
+    return numero*numero; //4
 }
-console.log(calcularCuadrado(3)); // -> 18
+function calcularCubo(numero) {
+    return calcularCuadrado(numero) * numero; //8
+}
+console.log(calcularCubo(2)); // -> 18
+
 
 //! 5.0.4 Funciones - Variables Locales
 /*
@@ -74,8 +80,8 @@ function dividir(a, b) {
     }
     return a / b;
 }
+console.log(dividir(10, 2)); // -> Error: División por cero
 console.log(dividir(10, 2)); // -> 5
-console.log(dividir(10, 0)); // -> Error: División por cero
 
 //! 5.1.1 Validación de parámetros
 /*
@@ -98,6 +104,15 @@ La recursión permite que una función se llame a sí misma para resolver proble
 */
 
 //! Ejemplo: calcular factorial
+n!=n*(n-1)*(n-2).. . 1
+5!= 5*4*3*2*1=120 =>5!= 5*4!
+4!= 4*3*2*1 = 24 => 4!= 4*3!
+3!= 3*2*1 = 6 =>    3!= 3*2!
+2!= 2*1 =2 =>       2!=2*1! 
+1!= 1 =1 =>         1!=1
+
+3!=3*2*1=6
+
 function factorial(n) {
     if (n === 0 || n === 1) return 1; // Caso base
     return n * factorial(n - 1); // Llamada recursiva
@@ -115,12 +130,22 @@ console.log(sumaArray([1, 2, 3, 4])); // -> 10
 /*
 Las funciones flecha son una forma simplificada de escribir funciones.
 */
-
+function name(params) {
+    
+}
+name()
 //! Ejemplo básico
 const saludarArrow = () => console.log("¡Hola desde una función flecha!");
 saludarArrow(); // -> ¡Hola desde una función flecha!
 
 //! Con parámetros y retorno implícito
+
+function cuadrado(num) {
+    return num*num
+}
+let cua= cuadrado(2)
+console.log(cua);
+
 const elevarAlCuadrado = (num) => num * num;
 console.log(elevarAlCuadrado(5)); // -> 25
 
@@ -146,7 +171,9 @@ console.log(dividirNumerosArrow(10, 2)); // -> 5
 /*
 Un callback es una función pasada como argumento a otra función.
 */
-
+let cuah='wer'
+let suma= (a,b)=> a+b
+console.log(suma(3,4));
 //! Ejemplo con callback
 function procesarDatos(dato, callback) {
     console.log("Procesando dato:", dato);

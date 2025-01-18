@@ -1,11 +1,11 @@
 //! Módulo 5: Cuestionario 
 
 //! 1. El siguiente fragmento de código:
-//! function saludo() { }
+function saludo() { }
 //! es:
 //* Opciones ✍:
 //* a) La llamada a la función saludo.
-//* b) La declaración de una función vacía llamada saludo. 
+//* b) La declaración de una función vacía llamada saludo. ✔
 //* c) Incorrecto, el código no significa nada.
 //* d) La declaración de una variable llamada saludo.
 
@@ -13,58 +13,65 @@
 //* Opciones ✍:
 //* a) devolver;
 //* b) retornar;
-//* c) return; 
+//* c) return; ✔
 //* d) calcular;
+function suma(a,b) {
+    return a+b
+}
+console.log(suma(3,4));
 
 //! 3. Analiza el siguiente código:
-//! function cuenta(numero) {
-//!     console.log("cuenta");
-//!     if (numero > 0) cuenta(--numero);
-//! }
-//! cuenta(4);
-//! ¿Cuántas veces se mostrará "cuenta" en la consola?
+function cuenta(numero) { //4 3 2 1
+    console.log("cuenta");
+    if (numero > 0) cuenta(--numero);
+}
+cuenta(4);
+//¿Cuántas veces se mostrará "cuenta" en la consola?
 //* Opciones ✍:
 //* a) 3
 //* b) 4 
-//* c) 5
+//* c) 5 ✔
 //* d) 0
 
+
+
 //! 4. Analiza el siguiente código:
-//! let a = 5;
-//! function prueba() {
-//!     let a = 15;
-//!     console.log(a);
-//! }
-//! ¿Qué se mostrará en la consola?
+ let a = 5;
+ function prueba() {
+     let a = 15;
+     console.log(a);
+ }
+ prueba()
+// ¿Qué se mostrará en la consola?
 //* Opciones ✍:
-//* a) 15 
+//* a) 15 ✔
 //* b) 5
 //* c) a
 //* d) Nada aparecerá.
 
 //! 5. Revisa el siguiente código:
-//! let valor = 30;
-//! function prueba(valor) {
-//!     console.log(valor);
-//! }
-//! prueba(50);
+ let valor = 30;
+ function prueba(valor) {
+     console.log(valor);
+ }
+ prueba(50);
 //* Opciones ✍:
-//* a) 50 
+//* a) 50 ✔
 //* b) 30
 //* c) valor
 //* d) Nada se mostrará.
 
 //! 6. Revisa el siguiente código:
-//! let m = 12;
-//! let n = 18;
-//! function mostrar(m) {
-//!     console.log(m);
-//! }
-//! mostrar(n);
+let m = 12;
+let n = 18;
+function mostrar(m) {
+    console.log(m);
+}
+mostrar(n);
 //* Opciones ✍:
 //* a) Nada, porque la función espera m y recibe n.
 //* b) 12
-//* c) 18 
+//* c) 18 ✔
 //* d) m
 
 //! 7. Has definido la siguiente expresión de función:
