@@ -181,3 +181,22 @@ function procesarDatos(dato, callback) {
 }
 
 procesarDatos(5, (dato) => console.log("Dato procesado:", dato * 2)); // -> Procesando dato: 5, Dato procesado: 10
+
+//! SETTIMEOUT Y SETINTERVAL
+setTimeout(() => {console.log('hola');
+}, 3000);
+
+let intervaloId=setInterval(() => {console.log('adios');
+}, 2000);
+
+setTimeout(() => {
+    clearInterval(intervaloId)
+}, 5000);
+//! SORT
+let nombres=['maria','juana','ana','marco','soledad','belen']
+console.log(nombres.sort());
+let numeros=[90,80,10,4,6,12]
+console.log(numeros.sort((a,b)=>a-b));
+console.log(numeros.sort((a,b)=>b-a));
+
+
