@@ -9,14 +9,17 @@ Las excepciones son errores que pueden ser controlados con bloques específicos.
 */
 
 //! Ejemplo de un error
-// console.log(10 / ); // SyntaxError: Unexpected token ')'
+console.log('juana');
+console.log(10 / ); // SyntaxError: Unexpected token ')'
+
 
 //! Ejemplo de una excepción
 try {
-    console.log(variableNoDefinida);
-  } catch (error) {
-    console.log("Error atrapado:", error.message); // Output: Error atrapado: variableNoDefinida is not defined
-  }
+  console.log(variableNoDefinida);
+} catch (error) {
+  console.log("Error atrapado:", error.message); // Output: Error atrapado: variableNoDefinida is not defined
+}
+console.log('hola');
   
   //! 6.0.3 Errores en JavaScript
   /*
@@ -29,10 +32,23 @@ try {
   
   //! Ejemplo de ReferenceError
   // console.log(noDeclarada); // ReferenceError: noDeclarada is not defined
+  console.log(nombre);
   
   //! Ejemplo de TypeError
-  const obj = {};
-  // obj.prop = "nuevo"; // TypeError: Cannot set property 'prop' of undefined
+  let algo='sjdjdjdjdjJ'
+  let algunNumero=45
+  // console.log(algo.toUpperCase());
+  // console.log(algo.toLowerCase());
+  console.log(algunNumero.toLowerCase());
+  
+  num.toUpperCase()
+  //! Ejemplo de Error de rango
+  let frutas=['manzana', 'platano','cereza']
+console.log(frutas[5]);
+console.log(frutas.slice(10,20));
+
+let comidas= Array(5)
+console.log(comidas);
   
   //! 6.1 Sección 2 – Errores y Excepciones – Parte 2
   
@@ -42,7 +58,7 @@ try {
   */
   
   try {
-    JSON.parse("{malformado: true}"); // Error de sintaxis
+    JSON.parse("malformado: true"); // Error de sintaxis
   } catch (error) {
     console.log("Error al parsear JSON:", error.message);
   }
@@ -57,11 +73,29 @@ try {
   } finally {
     console.log("Bloque finally ejecutado."); // Siempre se ejecuta
   }
+
+  let a = 10;
+  try {
+      a = b; // First ReferenceError
+  } catch (error) {
+      try {
+       console.log(b); // Second ReferenceError
+      } catch {
+       console.log("Second catch!"); // -> Second catch!
+      }
+  } finally{
+    console.log('suceda de todos modos');
+  }
   
+
+
+
   //! 6.1.6 Lanzar excepciones personalizadas con throw
   /*
   Podemos crear nuestras propias excepciones utilizando la palabra clave `throw`.
   */
+ throw new Error("hola");
+ console.log('hola Mundo');
   
   try {
     const edad = -1;
@@ -117,6 +151,15 @@ try {
   */
   
   console.time("Tiempo de ejecución");
-  for (let i = 0; i < 1000000; i++) {} // Operación pesada
+  for (let i = 0; i < 1000000; i++) {console.log(i);
+  } // Operación pesada
   console.timeEnd("Tiempo de ejecución"); // Muestra el tiempo en ms
+  console.time("Tiempo de ejecución while");
+  let i=0
+  while (i< 1000000) {
+    console.log(i);
+    i++
+    
+  }
+  console.timeEnd("Tiempo de ejecución while"); // Muestra el tiempo en ms
   
