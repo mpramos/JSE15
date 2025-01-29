@@ -1,0 +1,115 @@
+<!-- DOM -->
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p {
+            background-color: aqua;
+        }
+    </style>
+ </head>
+ <body>
+    <h1 class="titulo" id="primer-titulo" >Primer encabezado</h1>
+    <h1 class="titulo" id="segundo-titulo" >Segundo encabezado</h1>
+    <h1 class="titulo" id="tercer-titulo" >Tercer encabezado</h1>
+    <h1 ></h1>
+    <ul></ul>
+    <ol>
+        <li>lista ol</li>
+        <li>lista ol</li>
+        <li>lista ol</li>
+        <li>lista ol</li>
+        <li>lista ol</li>
+        <li>lista ol</li>
+    </ol>
+    <p>Parrafp</p>
+    <script>
+        const todosLosEncabezados=document.getElementsByTagName('h1')
+        // console.log(todosLosEncabezados);
+
+        for (let indice = 0; indice < todosLosEncabezados.length; indice++) {
+            // console.log(todosLosEncabezados[indice]);
+            
+        }
+        const todosLosEncabezadosPorClase= document.getElementsByClassName('titulo')
+        // console.log(todosLosEncabezadosPorClase);
+        for (let indice = 0; indice < todosLosEncabezadosPorClase.length; indice++) {
+            // console.log(todosLosEncabezadosPorClase[indice]);
+        }
+        const primerEncabezado= document.getElementById('primer-titulo')
+        const tercerEncabezado= document.getElementById('tercer-titulo')
+        // console.log('PRIMER ENCABEZADO');
+        // console.log(primerEncabezado);
+        // console.log('TERCER ENCABEZADO');
+        // console.log(tercerEncabezado);
+        
+        // Obtención de elementos mediante el uso de querySelector
+        let primerTitulo= document.querySelector('#primer-titulo')
+        console.log('PRIMER TITULO');
+        console.log(primerTitulo);
+        let tituloPorClase= document.querySelector('.titulo')
+        console.log('PRIMER TITULO POR CLASE');
+        console.log(tituloPorClase);
+        let titulosPorClase= document.querySelectorAll('.titulo')
+        console.log('TITULOS POR CLASE');
+        console.log(titulosPorClase);
+        // for (const titulo of tituloPorClase) {
+        //     console.log(titulo);
+            
+        // }
+        for (let index = 0; index < titulosPorClase.length; index++) {
+            console.log(titulosPorClase[index]);
+            
+        }
+        let tituloPorEtiqueta= document.querySelector('h1')
+        console.log('TITULO POR ETIQUETA');
+        console.log(tituloPorEtiqueta);
+        let titulosPorEtiqueta= document.querySelectorAll('h1')
+        console.log('TITULOS POR ETIQUETA');
+        console.log(titulosPorEtiqueta);
+        
+        for (let index = 0; index < titulosPorEtiqueta.length; index++) {
+            console.log(titulosPorEtiqueta[index]);
+            
+        }
+        
+        const titulos = document.querySelectorAll('h1')
+        // titulos[3].setAttribute('class','titulo')
+        // titulos[3].setAttribute('id','cuarto-titulo')
+        // titulos[3].className='titulo'
+        // titulos[3].id='cuarto-titulo'
+        titulos[3].classList.add('titulos','header-titulos')
+        titulos[3].classList.remove('titulos','header-titulos')
+
+        titulos[3].textContent='Cuarto encabezado'
+
+        const lista= `
+        <li>lista 1</li>
+        <li>lista 2</li>
+        <li>lista 3</li>
+        <li>lista 4</li>
+        <li>lista 5</li>
+        `
+        const ul= document.querySelector('ul')
+        ul.innerHTML=lista
+        const ol=document.querySelector('ol')
+        ol.innerHTML=''
+
+       titulos.forEach((titulo,indice)=>{
+        if (indice % 2 ===0) {
+            // titulo.style.color='green'
+            titulo.style.backgroundColor='green'
+            titulo.style.fontSize='20px'
+        } else {
+            // titulo.style.color='red'
+            titulo.style.backgroundColor='red'
+            titulo.style.fontSize='10px'
+        }
+       })
+
+    </script>
+ </body>
+ </html>
