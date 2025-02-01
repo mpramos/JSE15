@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button> Click me</button>
+
+    <button onclick="clickMe()"> Click me ... </button>
+    <button id="dblclick"> Doble Click </button>
+    <button id="mouseEnter"> Mouse Enter </button>
+    <script>
+        // selectedElement.addEventListener('eventlistener', function name(params) {
+            
+        // })
+            const button=document.querySelector('button')
+            button.addEventListener('click',e=>{
+                console.log('objeto evento',e);
+                console.log('el nombre del element target',e.target);
+                console.log('el contenido del elemento de donde se produjo el evento ', e.target.textContent);
+                
+            })
+            const clickMe=()=>{
+                alert('Hola a todos , me hiciste click')
+            }
+            
+            // dblclick
+            const btnDobleClick= document.querySelector('#dblclick')
+            btnDobleClick.addEventListener('dblclick', e=>{
+                console.log('objeto evento',e);
+                console.log('el nombre del element target',e.target);
+                console.log('el contenido del elemento de donde se produjo el evento ', e.target.textContent);
+
+            })
+
+            // mouseenter
+            const btnMouse= document.querySelector('#mouseEnter')
+            btnMouse.addEventListener('mouseenter', e=>{
+                console.log('objeto evento',e);
+                console.log('el nombre del element target',e.target);
+                console.log('el contenido del elemento de donde se produjo el evento ', e.target.textContent);
+            })
+
+    </script>
+</body>
+</html>l

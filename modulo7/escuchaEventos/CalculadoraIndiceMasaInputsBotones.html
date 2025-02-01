@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> Calculadora de indice de Masa</h1>
+    <input id="masa" placeholder="masa en kilogramos">
+    <input id="altura" type="text" placeholder="altura en metros">
+    <button>calcular el indice de masa</button>
+
+    <script>
+       let masa= document.querySelector('#masa')
+       let altura= document.querySelector('#altura')
+       let button=document.querySelector('button') 
+       let idm
+       button.addEventListener('click',()=>{
+        idm= masa.value / altura.value ** 2
+        alert(`tu indice de masa es  ${idm.toFixed(2)}`)
+        console.log(idm);
+        
+       })
+
+</script>
+</body>
+</html>

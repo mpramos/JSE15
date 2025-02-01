@@ -1,0 +1,47 @@
+<!-- document.createElement('tagname') -->
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+ </head>
+ <body>
+    <h1>Eliminando nodos hijos</h1>
+    <h2>EVOLUTECH 2025</h2>
+    <ul>
+        <li>lista 1</li>
+        <li>lista 2</li>
+        <li>lista 3</li>
+        <li>lista 4</li>
+        <li>lista 5</li>
+    </ul>
+
+    <script>
+
+        // Creacion de un elemento de html
+        // let title=document.createElement('h1')
+        // title.className='title'
+        // title.style.fontSize='24px'
+        // title.textContent ='creando un elemento de html'
+        // console.log(title);
+
+        //Creaciòn de varios elementos de html
+        // UglifyJS o Terser
+        let title
+        for (let i = 0; i < 3; i++) {
+              title=document.createElement('h1')  
+              title.className='title'
+              title.style.fontSize='24px'
+              title.textContent=i
+              document.body.appendChild(title)
+        }
+        const ul= document.querySelector('ul')
+        // const listas=document.querySelectorAll('li')
+        // for (const list of listas) {
+        //     ul.removeChild(list)
+        // }
+        ul.innerHTML=''
+    </script>
+ </body>
+ </html>
